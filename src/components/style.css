@@ -1,0 +1,103 @@
+.ToDoList {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ToDoList h1 {
+    font-size: 24px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.ToDoList h1::after {
+    content: ' 🎯';
+    font-size: 24px;
+    margin-left: 8px;
+}
+
+.ToDoItem {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+.ToDoItem:last-child {
+    border-bottom: none;
+}
+
+.ToDoItem:hover {
+    background-color: #f9f9f9;
+}
+
+.ToDoItem input[type="checkbox"] {
+    margin-right: 12px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.ItemContent {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.Title {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 500;
+    color: #333;
+}
+
+.DueDate {
+    font-size: 12px;
+    color: #888;
+    margin: 2px 0 0;
+}
+
+.DueDate[data-due="Today"] {
+    color: #3cba54;
+}
+
+.DueDate[data-due="Tomorrow"] {
+    color: #f4c20d;
+}
+
+.DueDate[data-due="Monday"],
+.DueDate[data-due="Saturday"] {
+    color: #4885ed;
+}
+
+.Action {
+    display: flex;
+    gap: 10px;
+    color: #d1453b;
+    cursor: pointer;
+}
+
+.Action svg {
+    font-size: 16px;
+}
+
+.add-task {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    color: #d1453b;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.add-task svg {
+    font-size: 20px;
+}
